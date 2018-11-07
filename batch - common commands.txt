@@ -1,0 +1,6 @@
+# for each i in ('dir /b /s /a:-D'), do the action stated
+for /f "tokens=*" %i in ('dir /b /s /a:-D') do @echo %i
+
+# copy from source to destination all pdfs and excel files in all subdirectories 
+# empty directories will be skipped
+robocopy -source- -destination- *.pdf *.xlsm /s
