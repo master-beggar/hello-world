@@ -3,4 +3,6 @@ for /f "tokens=*" %i in ('dir /b /s /a:-D') do @echo %i
 
 # copy from source to destination all pdfs and excel files in all subdirectories 
 # empty directories will be skipped
-robocopy -source- -destination- *.pdf *.xlsm /s
+robocopy -source- -destination- *.pdf *.xlsm /s /l
+% the "/l" shows the list only and doesn't actually copy, remove this to copy
+
